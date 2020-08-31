@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trilhas de aprendizagem</title>
+        <style>
+            body, html {
+                margin: 0px;
+                padding: 0px;
+                background-color: #a5e9e1;
+                box-sizing: border-box;
+            }
+
+            html * {
+                cursor: default;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            #cabecalho {
+                background-color: #2e2b2b;
+            }
+
+            #corpo {
+                background-color:  #fdf6f6;
+                height: 95vh;
+                width: 100%;
+                justify-self: center;
+                align-self: center;
+                transition: all 1s;
+            }
+
+            #conteudo {
+                background-color: #fdf6f6;
+                text-align: center;
+                padding-left: 25vw;
+                padding-right: 25vw;
+                padding-top: 50px;
+            }
+
+            #rodape {
+                background-color:  #2e2b2b;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                padding: 2vh;
+            }
+
+            #cabecalho img {
+                height: 5vh;
+            }
+
+            #menu {
+                position: absolute;
+                right: 0px;
+                cursor: pointer;
+            }
+
+            #textoinicial {
+                text-transform: uppercase;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                position: absolute;
+                top: 50%;
+                transform: translate(0);
+                font-size: 8vw;
+                text-align: center;
+                opacity: 0;
+                transition: transform 1s, opacity 1s;
+            }
+
+            #kan {
+                width: 100%;
+            }
+
+            #w3 {
+                width: 25%;
+                padding: 50px;
+            }
+
+            ol li {
+                margin: 0px;
+                padding: 5px;
+                list-style-position: outside;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 2vh;
+                text-align: center;
+                list-style-position: inside;
+                padding-bottom: 50px;
+            }
+
+            ul {
+                border: solid 2px #2e2b2b;
+                border-radius: 5px;
+                padding: 0.5em 1em 0.5em 2.3em;
+                position: relative;
+            }
+
+            ul li {
+                line-height: 1.5;
+                padding: 0.5em 0;
+                list-style-type: square;
+                list-style-position: outside;
+            }
+            
+            ol h1 {
+                padding: 20px;
+                font-size: 3vh;
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #2e2b2b;
+                border-radius: 5PX;
+                color: white;
+            }
+
+            #unicesumar {
+                cursor: pointer;
+            }
+
+        </style>
+	</head>
+	<body>
+		<div class="container">
+            <header id="cabecalho">
+                <a href="https://www.unicesumar.edu.br/home/"><img src="https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/unicesumar.png" alt="unicesumar" id="unicesumar"></a>
+                <img src="https://img.icons8.com/cotton/2x/menu.png" alt="navbar" id="menu">
+            </header>
+            <img src="https://wallpaperaccess.com/full/783261.jpg" id="corpo"></img>
+            <div id="conteudo">
+                <img src="https://66.media.tumblr.com/f1bd3cd7e4b20dba634393462326859b/tumblr_inline_pcdui455cU1r8ovh1_540.png" alt="kan" id="kan">
+                <ol>
+                    <h1>TRILHAS DA COMPUTAÇÃO</h1>
+                    <li id="progamação"> Progamação
+                        <ul>
+                            <li>Intrudução a JavaScript: Desenhos e Animação</li>
+                            <li>Introdução a HTML/CSS: Criação de páginas Web</li>
+                            <li>Introdução a SQL: Consulta e Gerenciamento de dados</li>  
+                            <li>Javascript Avançado: Jogos & Visualizações</li>
+                            <li>Javascript Avançado: Simulações Naturais</li>
+                            <li>HTML/JS: Tornando paginas Web interativas com jQuery</li>
+                            <li>Conheça o profissional</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr>
+                <img src="https://lh3.googleusercontent.com/i-ij7KM2pFUUpFE31QAUDXg5mzGFNbm16S4tjmg2ZyuhCGLgNJ8oXJRbq7ysh6LoZg" alt="w3" id="w3">
+                <ol>
+                    <h1>TRILHAS QUE GOSTARIA DE ME PROGAMAR PARA ESTUDAR</h1>
+                    <UL>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>C#</li>
+                        <li>Machine Learning</li>
+                        <li>Raspberry Pi</li>
+                    </UL>
+                </ol>
+            </div>
+            <footer id="rodape">Matheus Henrique Fernandes Santos - RA: 20064603-2</footer>
+        </div>
+
+        <h1 id="textoinicial">Trilhas de aprendizagem</h1>
+
+        <script>
+            var landscape = document.querySelector('#corpo');
+            var textoinicial = document.querySelector('#textoinicial');
+
+            landscape.style.filter = 'grayscale(100%) brightness(75%) contrast(0%)';
+            document.addEventListener('DOMContentLoaded', () => {
+                setTimeout(() => {
+                    landscape.style.filter = 'grayscale(100%) brightness(75%) contrast(85%)';
+                    setTimeout(() => {
+                        textoinicial.style.opacity = '1';
+                        textoinicial.style.transform = 'translate(0, -70%)';
+                    }, 500);
+                }, 500);
+            });
+        </script>
+
+	</body>
+</html>
